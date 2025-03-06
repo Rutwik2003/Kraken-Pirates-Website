@@ -97,8 +97,8 @@ const Achievements = () => {
     <section id="achievements" className="py-20 bg-primary-900 relative">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-primary-900 to-transparent z-10"></div>
-      <div className="absolute top-1/4 right-10 w-40 h-40 bg-yellow-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/3 left-10 w-32 h-32 bg-yellow-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 right-10 w-40 h-40 bg-primary-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/3 left-10 w-32 h-32 bg-primary-500/10 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 relative z-20">
         <div className="text-center mb-16">
@@ -192,7 +192,7 @@ const Achievements = () => {
         {/* Crew Statistics */}
         <div>
           <h3 className="text-2xl font-bold mb-8 text-white text-center">Crew Statistics</h3>
-          <div className="bg-gray-800 rounded-xl p-8 border border-yellow-600/20">
+          <div className="bg-gray-800 rounded-xl p-8 border border-primary-600/20">
             {/* <div className="mt-8 pt-8 border-t border-gray-700"> */}
               <div className="flex items-center gap-3 justify-center">
                 <Star className="text-primary-500" size={20} />

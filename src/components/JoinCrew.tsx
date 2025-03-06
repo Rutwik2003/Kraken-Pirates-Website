@@ -50,7 +50,7 @@ const JoinCrew = () => {
   return (
     <section id="join-crew" className="py-20 bg-primary-900 relative">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-gray-900 to-transparent z-10"></div>
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-primary-900 to-transparent z-10"></div>
       <div className="absolute top-40 right-10 w-32 h-32 bg-primary-800/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-40 left-10 w-40 h-40 bg-primary-800/20 rounded-full blur-3xl"></div>
       

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useAdminStore } from './store/adminStore';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Timeline from './components/Timeline';

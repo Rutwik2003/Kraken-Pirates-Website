@@ -38,7 +38,7 @@ const PremiumRoles = () => {
   return (
     <section id="premium" className="py-20 bg-primary-900 relative">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-gray-900 to-transparent z-10"></div>
+      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-primary-900 to-transparent z-10"></div>
       <div className="absolute top-1/4 left-10 w-40 h-40 bg-primary-600/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/3 right-10 w-32 h-32 bg-primary-400/10 rounded-full blur-3xl"></div>
       
