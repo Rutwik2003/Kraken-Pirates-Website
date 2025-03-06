@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1D1616;
+  color: #EEEEEE;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1D1616;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8E1616;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D84040;
+}
+
+/* Reduce eye strain */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  
+  body {
+    /* Slightly reduce contrast for better readability */
+    color: rgba(238, 238, 238, 0.95);
+  }
+  
+  /* Soften bright text */
+  .text-primary-600 {
+    color: rgba(216, 64, 64, 0.95);
+  }
+  
+  /* Add subtle text shadow to improve readability */
+  h1, h2, h3, h4, h5, h6 {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+}
