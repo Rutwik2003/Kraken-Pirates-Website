@@ -30,7 +30,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <Anchor className="text-primary-600" size={24} />
+            {/* <Anchor className="text-primary-600" size={24} /> */}
+            <img src='/duckgang_logo.png' className='w-8 h-8'></img>
             <span className="text-xl font-bold text-light">DuckGang</span>
           </a>
 

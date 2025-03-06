@@ -31,7 +31,7 @@ const Hero = () => {
       />
       
       {/* Floating wanted posters */}
-      <div className="absolute inset-0 z-10 overflow-hidden">
+      {/* <div className="absolute inset-0 z-10 overflow-hidden">
         <div 
           className="absolute top-20 left-[10%] w-48 h-62 bg-primary-800/40 rounded-md border-2 border-primary-600 backdrop-blur-sm transform rotate-[-5deg]"
           style={{ transform: `rotate(-5deg) translateY(${offset * 0.2}px)` }}
@@ -75,14 +75,16 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+       */}
       {/* Hero content */}
       <div className="container mx-auto px-4 z-20 text-center">
         <div className="flex justify-center mb-6">
           <div className="relative">
-            <Anchor className="text-primary-600" size={80} />
+            {/* <Anchor className="text-primary-600" size={80} /> */}
+            <img className='w-20 h-20' src='/duckgang_logo.png'></img>
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-2xl font-bold">DG</span>
+              
+              {/* <span className="text-2xl font-bold">DG</span> */}
             </div>
           </div>
         </div>
