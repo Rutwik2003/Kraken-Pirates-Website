@@ -18,7 +18,7 @@ const Navbar = () => {
     { href: '#crew-info', label: 'Crew Info' },
     { href: '#join-crew', label: 'Join Crew' },
     { href: '#community', label: 'Community' },
-    { href: '#premium', label: 'Premium' },
+    // { href: '#premium', label: 'Premium' },
     { href: '#achievements', label: 'Achievements' },
   ];
 

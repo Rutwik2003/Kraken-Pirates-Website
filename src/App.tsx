@@ -19,7 +19,7 @@ function App() {
       <CrewInfo />
       <JoinCrew />
       <CommunityHub />
-      <PremiumRoles />
+      {/* <PremiumRoles /> */}
       <Achievements />
       <Footer />
     </div>
