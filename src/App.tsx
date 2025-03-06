@@ -8,21 +8,9 @@ import JoinCrew from './components/JoinCrew';
 import CommunityHub from './components/CommunityHub';
 import PremiumRoles from './components/PremiumRoles';
 import Achievements from './components/Achievements';
-import AdminPanel from './components/admin/AdminPanel';
 import Footer from './components/Footer';
 
 function App() {
-  const { isAuthenticated } = useAdminStore();
-  const [isAdmin, setIsAdmin] = useState(false);
-
-  useEffect(() => {
-    const isAdminRoute = window.location.pathname === '/admin';
-    setIsAdmin(isAdminRoute && isAuthenticated);
-  }, [isAuthenticated]);
-
-  if (isAdmin) {
-    return <AdminPanel />;
-  }
 
   return (
     <div className="min-h-screen bg-primary-900 text-light">
