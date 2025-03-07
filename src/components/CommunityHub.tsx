@@ -3,30 +3,30 @@ import { MessageSquare, Calendar, Image, ExternalLink, Disc as Discord, Twitter,
 
 const CommunityHub = () => {
   const events = [
-    {
-      name: "Weekly Raid Night",
-      date: "Every Friday",
-      time: "8:00 PM EST",
-      description: "Join forces with crew members to tackle the toughest raids"
-    },
-    {
-      name: "PvP Tournament",
-      date: "Last Saturday of Month",
-      time: "3:00 PM EST",
-      description: "Test your skills against other crew members for prizes and glory"
-    },
-    {
-      name: "Newbie Training",
-      date: "Every Tuesday",
-      time: "7:00 PM EST",
-      description: "Learn game mechanics and strategies from veteran players"
-    },
-    {
-      name: "Boss Hunt",
-      date: "Every Sunday",
-      time: "2:00 PM EST",
-      description: "Group expedition to hunt rare bosses and collect valuable loot"
-    }
+    // {
+    //   name: "Weekly Raid Night",
+    //   date: "Every Friday",
+    //   time: "8:00 PM EST",
+    //   description: "Join forces with crew members to tackle the toughest raids"
+    // },
+    // {
+    //   name: "PvP Tournament",
+    //   date: "Last Saturday of Month",
+    //   time: "3:00 PM EST",
+    //   description: "Test your skills against other crew members for prizes and glory"
+    // },
+    // {
+    //   name: "Newbie Training",
+    //   date: "Every Tuesday",
+    //   time: "7:00 PM EST",
+    //   description: "Learn game mechanics and strategies from veteran players"
+    // },
+    // {
+    //   name: "Boss Hunt",
+    //   date: "Every Sunday",
+    //   time: "2:00 PM EST",
+    //   description: "Group expedition to hunt rare bosses and collect valuable loot"
+    // }
   ];
 
   const galleryImages = [
@@ -102,29 +102,34 @@ const CommunityHub = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-3 text-light">
                   <span className="text-primary-600">#</span>
-                  <span>announcements</span>
+                  <span>Announcements</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <span className="text-primary-600">#</span>
-                  <span>crew-chat</span>
+                  <span>Roles</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <span className="text-primary-600">#</span>
-                  <span>event-planning</span>
+                  <span>Chat</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <span className="text-primary-600">#</span>
-                  <span>trading-post</span>
+                  <span>Giveaways</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <span className="text-primary-600">#</span>
-                  <span>help-and-guides</span>
+                  <span>Events</span>
+                </div>
+                <div className="flex items-center gap-3 text-gray-300">
+                  <span className="text-primary-600">#</span>
+                  <span>Rell seas info</span>
                 </div>
               </div>
+              <a href='https://discord.xyz/quacky' target='_blank'>
               <button className="w-full py-3 bg-primary-800 hover:bg-primary-600 text-white font-bold rounded-md transition-colors flex items-center justify-center gap-2">
                 <Discord size={18} />
                 <span>Join Our Discord</span>
-              </button>
+              </button></a>
             </div>
           </div>
           

@@ -5,33 +5,33 @@ import { Milestone, Flag, Trophy, Users, Star } from 'lucide-react';
 
 const timelineEvents = [
   {
-    date: 'January 2024',
+    date: 'May 2024',
     title: 'DuckGang Founded',
     description: 'The legendary crew sets sail for the first time',
     icon: <Flag className="text-primary-600" size={24} />,
   },
   {
-    date: 'March 2024',
+    date: 'January 2025',
     title: 'First Territory Conquest',
-    description: 'Successfully claimed our first major territory',
+    description: 'Successful creation of the Discord Community',
     icon: <Milestone className="text-primary-600" size={24} />,
   },
   {
-    date: 'May 2024',
-    title: '500 Members Milestone',
+    date: 'February 2025',
+    title: '2500 Members Milestone',
     description: 'The crew grows stronger with each passing day',
     icon: <Users className="text-primary-600" size={24} />,
   },
   {
-    date: 'July 2024',
-    title: 'Top 5 Crew Ranking',
-    description: 'Recognized among the most powerful crews',
+    date: 'March 2025',
+    title: '5000 Members Milestone',
+    description: 'The crew grows stronger with each passing day',
     icon: <Trophy className="text-primary-600" size={24} />,
   },
   {
-    date: 'December 2024',
+    date: 'December 2025',
     title: 'Future Goals',
-    description: '10,000 members and #1 crew status',
+    description: '10,000 members milestone',
     icon: <Star className="text-primary-600" size={24} />,
   },
 ];

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { UserPlus, ChevronDown, ChevronUp, Check } from 'lucide-react';
+import { UserPlus, ChevronDown, ChevronUp, Check, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const JoinCrew = () => {
-  const [activeTab, setActiveTab] = useState('blox');
+  const [selectedDivision, setSelectedDivision] = useState<'blox' | 'rell' | null>(null);
   const [expandedFaq, setExpandedFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -11,12 +12,12 @@ const JoinCrew = () => {
 
   const bloxFruitsFaqs = [
     {
-      question: "What level do I need to be to join?",
-      answer: "We require a minimum level of 1000 for regular members. However, exceptions can be made for dedicated players who show exceptional skill or potential."
+      question: "How to join discord?",
+      answer: "To join discord please click the join button at the top of the page. You will be redirected to the discord server. Once there you can find the Crew channel and join the Crew server."
     },
     {
-      question: "Do I need to have specific Devil Fruits?",
-      answer: "No specific Devil Fruit is required, but we do recommend having at least one Awakened fruit. Our crew values skill over specific abilities."
+      question: "How to join Roblox Group?",
+      answer: "To join Roblox Group please click the join button at the top of the page. You will be redirected to the Roblox Group. Once there you can find the Crew channel and join the Crew server."
     },
     {
       question: "How active do I need to be?",
@@ -24,27 +25,19 @@ const JoinCrew = () => {
     },
     {
       question: "Is there a trial period?",
-      answer: "Yes, new members undergo a 2-week trial period during which they must participate in crew activities and demonstrate their skills and teamwork."
+      answer: "Yes, new members undergo a 2-week trial period during which they must participate in crew activities and demonstrate their loyalty and teamwork."
     }
   ];
 
   const rellSeasFaqs = [
     {
-      question: "What are the ship requirements?",
-      answer: "You should have at least a Tier 3 ship with basic combat capabilities. We can help newer players upgrade their vessels through crew activities."
+      question: "How to join discord?",
+      answer: "To join discord please click the join button at the top of the page. You will be redirected to the discord server. Once there you can find the Crew channel and join the Crew server."
     },
     {
-      question: "Do I need specific weapons or abilities?",
-      answer: "While not required, having at least one Mythical weapon or ability will help you contribute more effectively to crew activities."
+      question: "How to join Roblox Group?",
+      answer: "To join Roblox Group please click the join button at the top of the page. You will be redirected to the Roblox Group. Once there you can find the Crew channel and join the Crew server."
     },
-    {
-      question: "How does the ranking system work?",
-      answer: "New members start as Deckhands and can progress through ranks based on participation, contribution to crew goals, and skill demonstration."
-    },
-    {
-      question: "Are there territory defense requirements?",
-      answer: "Yes, all members are expected to participate in territory defense when called upon. This is a crucial part of maintaining our crew's standing."
-    }
   ];
 
   return (
@@ -61,299 +54,171 @@ const JoinCrew = () => {
           </div>
           <h2 className="text-4xl font-bold mb-4 text-white">Join Our Crews</h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Become part of the legendary DuckGang and sail the digital seas with the most fearsome crew
+            Choose your division and become part of the legendary DuckGang
           </p>
         </div>
         
-        {/* Tabs */}
-        <div className="flex justify-center mb-10">
-          <div className="inline-flex rounded-md p-1 bg-gray-800">
-            <button
-              onClick={() => setActiveTab('blox')}
-              className={`px-6 py-3 rounded-md font-medium transition-all ${
-                activeTab === 'blox' 
-                  ? 'bg-primary-600 text-white' 
-                  : 'text-gray-400 hover:text-white'
-              }`}
-            >
-              Blox Fruits Division
-            </button>
-            <button
-              onClick={() => setActiveTab('rell')}
-              className={`px-6 py-3 rounded-md font-medium transition-all ${
-                activeTab === 'rell' 
-                  ? 'bg-primary-600 text-white' 
-                  : 'text-gray-400 hover:text-white'
-              }`}
-            >
-              Rell Seas Division
-            </button>
-          </div>
-        </div>
-        
-        {/* Tab content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* Left side - Requirements and Process */}
-          <div>
-            {activeTab === 'blox' ? (
-              <>
-                <h3 className="text-2xl font-bold mb-6 text-primary-600">Blox Fruits Division</h3>
-                <div className="space-y-6">
-                  <div className="bg-gray-800 rounded-lg p-6 border border-primary-600/20">
-                    <h4 className="text-xl font-bold mb-4 text-white">Requirements</h4>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check size={14} className="text-primary-400" />
-                        </div>
-                        <span className="text-gray-300">Minimum Level 1000</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check size={14} className="text-primary-400" />
-                        </div>
-                        <span className="text-gray-300">At least one Awakened Devil Fruit (preferred)</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check size={14} className="text-primary-400" />
-                        </div>
-                        <span className="text-gray-300">Basic understanding of raid mechanics</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check size={14} className="text-primary-400" />
-                        </div>
-                        <span className="text-gray-300">Discord account for communication</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check size={14} className="text-primary-400" />
-                        </div>
-                        <span className="text-gray-300">Active participation (minimum 2 events per week)</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-gray-800 rounded-lg p-6 border border-primary-600/20">
-                    <h4 className="text-xl font-bold mb-4 text-white">Application Process</h4>
-                    <ol className="space-y-4">
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-sm font-bold">1</span>
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-white">Join Our Discord</h5>
-                          <p className="text-gray-400">Connect with our community and introduce yourself</p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-sm font-bold">2</span>
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-white">Complete Application Form</h5>
-                          <p className="text-gray-400">Fill out our recruitment questionnaire</p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-sm font-bold">3</span>
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-white">Skill Assessment</h5>
-                          <p className="text-gray-400">Participate in a raid or PvP session with current members</p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-sm font-bold">4</span>
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-white">2-Week Trial Period</h5>
-                          <p className="text-gray-400">Prove your worth and commitment to the crew</p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-sm font-bold">5</span>
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-white">Official Induction</h5>
-                          <p className="text-gray-400">Receive your crew role and begin your journey</p>
-                        </div>
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </>
-            ) : (
-              <>
-                <h3 className="text-2xl font-bold mb-6 text-primary-600">Rell Seas Division</h3>
-                <div className="space-y-6">
-                  <div className="bg-gray-800 rounded-lg p-6 border border-primary-600/20">
-                    <h4 className="text-xl font-bold mb-4 text-white">Requirements</h4>
-                    <ul className="space-y-3">
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check size={14} className="text-primary-400" />
-                        </div>
-                        <span className="text-gray-300">Tier 3 Ship or higher</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check size={14} className="text-primary-400" />
-                        </div>
-                        <span className="text-gray-300">At least one Mythical weapon/ability (preferred)</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check size={14} className="text-primary-400" />
-                        </div>
-                        <span className="text-gray-300">Understanding of naval combat tactics</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check size={14} className="text-primary-400" />
-                        </div>
-                        <span className="text-gray-300">Discord account for communication</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check size={14} className="text-primary-400" />
-                        </div>
-                        <span className="text-gray-300">Willingness to participate in territory defense</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-gray-800 rounded-lg p-6 border border-primary-600/20">
-                    <h4 className="text-xl font-bold mb-4 text-white">Application Process</h4>
-                    <ol className="space-y-4">
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-sm font-bold">1</span>
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-white">Join Our Discord</h5>
-                          <p className="text-gray-400">Connect with our community and introduce yourself</p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-sm font-bold">2</span>
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-white">Ship Inspection</h5>
-                          <p className="text-gray-400">Showcase your vessel and equipment</p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-sm font-bold">3</span>
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-white">Naval Combat Trial</h5>
-                          <p className="text-gray-400">Demonstrate your sailing and combat abilities</p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-sm font-bold">4</span>
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-white">2-Week Trial Period</h5>
-                          <p className="text-gray-400">Participate in crew activities and territory defense</p>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <span className="text-white text-sm font-bold">5</span>
-                        </div>
-                        <div>
-                          <h5 className="font-bold text-white">Official Induction</h5>
-                          <p className="text-gray-400">Receive your crew rank and begin your journey</p>
-                        </div>
-                      </li>
-                    </ol>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-          
-          {/* Right side - Benefits and FAQs */}
-          <div>
-            <div className="bg-gray-800 rounded-lg p-6 border border-primary-600/20 mb-8">
-              <h4 className="text-xl font-bold mb-4 text-white">Crew Benefits</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-gray-700/50 rounded-lg p-4">
-                  <h5 className="font-bold text-light mb-2">Training & Mentorship</h5>
-                  <p className="text-gray-300 text-sm">Learn from experienced players who will help you master game mechanics</p>
-                </div>
-                <div className="bg-gray-700/50 rounded-lg p-4">
-                  <h5 className="font-bold text-light mb-2">Resource Sharing</h5>
-                  <p className="text-gray-300 text-sm">Access to crew resources, items, and assistance with farming</p>
-                </div>
-                <div className="bg-gray-700/50 rounded-lg p-4">
-                  <h5 className="font-bold text-light mb-2">Raid & Boss Teams</h5>
-                  <p className="text-gray-300 text-sm">Organized teams for tackling difficult content and bosses</p>
-                </div>
-                <div className="bg-gray-700/50 rounded-lg p-4">
-                  <h5 className="font-bold text-light mb-2">Territory Protection</h5>
-                  <p className="text-gray-300 text-sm">Safe zones for farming and protection from rival crews</p>
-                </div>
-                <div className="bg-gray-700/50 rounded-lg p-4">
-                  <h5 className="font-bold text-light mb-2">Weekly Events</h5>
-                  <p className="text-gray-300 text-sm">Fun competitions with in-game and real prizes</p>
-                </div>
-                <div className="bg-gray-700/50 rounded-lg p-4">
-                  <h5 className="font-bold text-light mb-2">Advancement Path</h5>
-                  <p className="text-gray-300 text-sm">Clear progression system with increasing benefits and responsibilities</p>
-                </div>
+        {/* Division Selection */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+          <button
+            onClick={() => setSelectedDivision(selectedDivision === 'blox' ? null : 'blox')}
+            className={`relative overflow-hidden rounded-xl border-2 transition-all duration-300 ${
+              selectedDivision === 'blox' 
+                ? 'border-primary-600 bg-primary-800/50' 
+                : 'border-primary-600/20 bg-gray-800/30 hover:border-primary-600/50'
+            }`}
+          >
+            <div className="p-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Blox Fruits Division</h3>
+              <p className="text-gray-300 mb-4">Join the Blox Fruit Division and dominate the seas with teamwork and epic adventures. Rise to the top with Duck Gang in Blox Fruit!</p>
+              <div className="flex items-center text-primary-600">
+                <span className="mr-2">View Details</span>
+                {selectedDivision === 'blox' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
               </div>
             </div>
-            
-            <div className="bg-gray-800 rounded-lg p-6 border border-primary-600/20">
-              <h4 className="text-xl font-bold mb-4 text-white">Frequently Asked Questions</h4>
-              <div className="space-y-3">
-                {(activeTab === 'blox' ? bloxFruitsFaqs : rellSeasFaqs).map((faq, index) => (
-                  <div 
-                    key={index} 
-                    className={`border ${
-                      expandedFaq === index 
-                        ? 'border-primary-600/30 bg-gray-700/30' 
-                        : 'border-gray-700 bg-gray-800'
-                    } rounded-lg transition-all`}
-                  >
-                    <button
-                      className="w-full px-4 py-3 flex justify-between items-center"
-                      onClick={() => toggleFaq(index)}
-                    >
-                      <span className="font-medium text-left text-white">{faq.question}</span>
-                      {expandedFaq === index ? (
-                        <ChevronUp size={18} className="text-primary-600" />
-                      ) : (
-                        <ChevronDown size={18} className="text-gray-400" />
-                      )}
-                    </button>
-                    {expandedFaq === index && (
-                      <div className="px-4 pb-3 text-gray-300">
-                        {faq.answer}
-                      </div>
-                    )}
-                  </div>
-                ))}
+          </button>
+
+          <button
+            onClick={() => setSelectedDivision(selectedDivision === 'rell' ? null : 'rell')}
+            className={`relative overflow-hidden rounded-xl border-2 transition-all duration-300 ${
+              selectedDivision === 'rell' 
+                ? 'border-primary-600 bg-primary-800/50' 
+                : 'border-primary-600/20 bg-gray-800/30 hover:border-primary-600/50'
+            }`}
+          >
+            <div className="p-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Rell Seas Division</h3>
+              <p className="text-gray-300 mb-4">Be part of Duck Gang's Rell Seas Division! Get ready for legendary adventures, as we dominate the new world of Rell Seas from day one!</p>
+              <div className="flex items-center text-primary-600">
+                <span className="mr-2">View Details</span>
+                {selectedDivision === 'rell' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
               </div>
             </div>
-          </div>
-        </div>
-        
-        <div className="mt-16 text-center">
-          <button className="px-8 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold rounded-md transition-colors shadow-lg">
-            Apply to Join DuckGang
           </button>
         </div>
+
+        {/* Division Details */}
+        <AnimatePresence>
+          {selectedDivision && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                {/* Requirements and Process */}
+                <div>
+                  <div className="space-y-6">
+                    <div className="bg-gray-800 rounded-lg p-6 border border-primary-600/20">
+                      <h4 className="text-xl font-bold mb-4 text-white">Requirements</h4>
+                      <ul className="space-y-3">
+                        {selectedDivision === 'blox' ? (
+                          <>
+                            <li className="flex items-start gap-3">
+                              <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check size={14} className="text-primary-400" />
+                              </div>
+                              <span className="text-gray-300"><strong>Join the Roblox Group:</strong> Become an official member by joining our Roblox group: <strong>!DUCKGANG!</strong> It’s where the true Duck Gang stands united.</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                          <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <Check size={14} className="text-primary-400" />
+                          </div>
+                          <span className="text-gray-300"><strong>Discord Account:</strong> Communication is key! You must have a Discord account to stay connected with the crew.</span>
+                        </li>
+                            <li className="flex items-start gap-3">
+                              <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check size={14} className="text-primary-400" />
+                              </div>
+                              <span className="text-gray-300"><strong>Minimum Bounty:</strong> You must have at least 20 million bounty to show your worth on the seas.</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                              <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check size={14} className="text-primary-400" />
+                              </div>
+                              <span className="text-gray-300"><strong>Duckgang Gear:</strong> Equip yourself with the "Tiny Duck" skin or proudly wear our Duck Gang merch, available in our official group store. <strong>!DUCKGANG!</strong>.</span>
+                            </li>
+                            
+                            <li className="flex items-start gap-3">
+                              <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check size={14} className="text-primary-400" />
+                              </div>
+                              <span className="text-gray-300"><strong>PvP Challenge:</strong> To prove your skills and gain entry, you'll need to PvP one of our members. Ready to show us what you’ve got? Simply call out any Duck Gang member in our Discord to challenge them..</span>
+                            </li>
+                          </>
+                        ) : (
+                          <>
+                            <li className="flex items-start gap-3">
+                              <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check size={14} className="text-primary-400" />
+                              </div>
+                              <span className="text-gray-300"><strong>Join the Roblox Group:</strong> Become an official member by joining our Roblox group: <strong>!DUCKGANG!</strong> It’s where the true Duck Gang stands united.</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                          <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <Check size={14} className="text-primary-400" />
+                          </div>
+                          <span className="text-gray-300"><strong>Discord Account:</strong> Communication is key! You must have a Discord account to stay connected with the crew.</span>
+                        </li>
+                          </>
+                        )}
+                        <li className="flex items-start gap-3">
+                          <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <Check size={14} className="text-primary-400" />
+                          </div>
+                          <span className="text-gray-300"><strong>Active Participation:</strong> We’re all about engagement! You need to participate in at least 2 events per week to keep the crew active and thriving.</span>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                {/* FAQs */}
+                <div className="bg-gray-800 rounded-lg p-6 border border-primary-600/20">
+                  <h4 className="text-xl font-bold mb-4 text-white">Frequently Asked Questions</h4>
+                  <div className="space-y-3">
+                    {(selectedDivision === 'blox' ? bloxFruitsFaqs : rellSeasFaqs).map((faq, index) => (
+                      <div 
+                        key={index} 
+                        className={`border ${
+                          expandedFaq === index 
+                            ? 'border-primary-600/30 bg-gray-700/30' 
+                            : 'border-gray-700 bg-gray-800'
+                        } rounded-lg transition-all`}
+                      >
+                        <button
+                          className="w-full px-4 py-3 flex justify-between items-center"
+                          onClick={() => toggleFaq(index)}
+                        >
+                          <span className="font-medium text-left text-white">{faq.question}</span>
+                          {expandedFaq === index ? (
+                            <ChevronUp size={18} className="text-primary-600" />
+                          ) : (
+                            <ChevronDown size={18} className="text-gray-400" />
+                          )}
+                        </button>
+                        {expandedFaq === index && (
+                          <div className="px-4 pb-3 text-gray-300">
+                            {faq.answer}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 text-center">
+                <button className="px-8 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold rounded-md transition-colors shadow-lg">
+                  Apply to {selectedDivision === 'blox' ? 'Blox Fruits' : 'Rell Seas'} Division
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

@@ -11,7 +11,7 @@ const CrewInfo = () => {
           </div>
           <h2 className="text-4xl font-bold mb-4 text-white">Crew Information</h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Learn about the history, leadership, and achievements of the legendary DuckGang
+            Learn about the history and achievements of the legendary DuckGang
           </p>
         </div>
         
@@ -19,22 +19,22 @@ const CrewInfo = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4 text-primary-600">Our History</h3>
             <p className="text-gray-300 mb-6">
-              Founded in the treacherous waters of Roblox in 2021, DuckGang quickly rose to prominence through 
-              strategic alliances and fearsome combat prowess. What started as a small band of adventurers has 
-              grown into one of the most respected gaming communities.
+            The story of Duck Gang begins with a simple vision: a group of passionate gamers coming together to create something legendary. Initially starting out in the world of Blox Fruit, the gang was formed by a small group of friends united by their love for adventure and competitive gameplay. It didn’t take long for the crew to make a mark, as they quickly dominated the seas. The crew’s signature trait? Their unwavering teamwork and unity. They didn’t just play together—they supported each other and rose as a true family, thriving together through every obstacle.
             </p>
             <p className="text-gray-300 mb-6">
-              Through countless battles and challenges, we've established ourselves as a dominant force in 
-              both Blox Fruits and Rell Seas, with our reputation spreading across the digital seas.
+            As the world of Blox Fruit expanded, so did the ambition of Duck Gang. The members’ passion didn’t stop there. With the announcement of the upcoming game Rell Seas, Duck Gang knew it was time to think bigger. Even before the game officially launched, the crew made preparations to conquer the new oceans of Rell Sea's. Duck Gang’s mission remained the same: to dominate, achieve greatness, and have a blast while doing so. The legendary crews in Rell Seas didn’t know what was coming, as Duck Gang was already getting ready to make its mark as a dominant force in the game.
+            </p>
+            <p className="text-gray-300 mb-6">
+            In every corner of the gaming world, Duck Gang strives to create unforgettable memories. With a strong foundation built on friendship, support, and a desire for greatness, the journey of Duck Gang is only just beginning. And no matter where the seas may lead, the crew’s destiny is clear—they will rise to the top, one adventure at a time.
             </p>
             <div className="flex items-center gap-4 text-gray-400">
               <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-primary-600">2021</span>
+                <span className="text-2xl font-bold text-primary-600">2024</span>
                 <span>Founded</span>
               </div>
               <div className="h-0.5 flex-1 bg-gray-700"></div>
               <div className="flex flex-col items-center">
-                <span className="text-2xl font-bold text-primary-600">500+</span>
+                <span className="text-2xl font-bold text-primary-600">6000+</span>
                 <span>Members</span>
               </div>
               <div className="h-0.5 flex-1 bg-gray-700"></div>
@@ -96,47 +96,47 @@ const CrewInfo = () => {
         
         <div className="bg-gray-800/50 rounded-xl p-8 border border-primary-600/20">
           <h3 className="text-2xl font-bold mb-6 text-primary-600 text-center">Notable Members</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {
-                name: "ThunderDuck",
-                role: "Raid Specialist",
-                bounty: "120,000,000",
+                name: "REDNTH1",
+                role: "Captain",
+                bounty: "10,000,000",
                 achievement: "Defeated the Sea King boss solo"
               },
               {
-                name: "QuackAttack",
-                role: "PvP Champion",
-                bounty: "95,000,000",
+                name: "LIGHTNINGQUICK9",
+                role: "Vice Captain",
+                bounty: "10,000,000",
                 achievement: "Undefeated in 50 consecutive duels"
               },
               {
-                name: "GoldenBill",
-                role: "Treasure Hunter",
-                bounty: "85,000,000",
+                name: "GABENINJA18",
+                role: "Chef",
+                bounty: "10,000,000",
                 achievement: "Discovered the legendary Duck Fruit"
               },
               {
-                name: "WaveDiver",
-                role: "Explorer",
-                bounty: "70,000,000",
+                name: "XAPOIX929",
+                role: "Adventurer",
+                bounty: "10,000,000",
                 achievement: "Mapped the entire Grand Quack Line"
               },
-              {
-                name: "FeatherStorm",
-                role: "Strategist",
-                bounty: "110,000,000",
-                achievement: "Orchestrated the Great Duck Invasion"
-              },
-              {
-                name: "DuckTales",
-                role: "Chronicler",
-                bounty: "65,000,000",
-                achievement: "Documented all DuckGang adventures"
-              }
+              // {
+              //   name: "FeatherStorm",
+              //   role: "Strategist",
+              //   bounty: "110,000,000",
+              //   achievement: "Orchestrated the Great Duck Invasion"
+              // },
+              // {
+              //   name: "DuckTales",
+              //   role: "Chronicler",
+              //   bounty: "65,000,000",
+              //   achievement: "Documented all DuckGang adventures"
+              // }
             ].map((member, index) => (
-              <div key={index} className="bg-gray-800 rounded-lg p-4 border border-primary-600/10 hover:border-primary-600/30 transition-all hover:bg-gray-700/50">
-                <div className="flex justify-between items-start mb-3">
+              <div key={index} className="bg-gray-800 rounded-lg p-2.5 border border-primary-600/10 hover:border-primary-600/30 transition-all hover:bg-gray-700/50">
+                <div className="flex justify-between items-start mb-4">
                   <h4 className="text-lg font-bold text-white">{member.name}</h4>
                   <div className="px-2 py-1 bg-primary-800/20 rounded text-xs text-primary-600 font-bold">
                     B$ {member.bounty}

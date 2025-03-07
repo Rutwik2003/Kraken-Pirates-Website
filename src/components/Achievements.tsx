@@ -6,74 +6,39 @@ const Achievements = () => {
   
   const wantedPosters = [
     {
-      name: "ThunderDuck",
-      bounty: "120,000,000",
-      achievement: "Defeated the Sea King boss solo",
-      description: "Known for his lightning-fast attacks and strategic mind, ThunderDuck has become a legend among the crew for his solo defeat of the fearsome Sea King boss that had terrorized our waters for months."
+      name: "REDNTH1",
+      bounty: "10,000,000",
+      achievement: "Captain of the Duck Gang",
+      description: "As the Captain of the Duck Gang, REDNTH1 has led the crew to countless victories, using his sharp strategic mind and fearless leadership to guide us through the toughest battles."
     },
     {
-      name: "QuackAttack",
-      bounty: "95,000,000",
-      achievement: "Undefeated in 50 consecutive duels",
-      description: "A master of PvP combat, QuackAttack has developed a fighting style that combines unpredictable movements with devastating combos, leading to an unprecedented 50-win streak."
+      name: "LIGHTNINGQUICK9",
+      bounty: "10,000,000",
+      achievement: "Vice Captain of the Duck Gang",
+      description: "As the Vice Captain, LIGHTNINGQUICK9 has proven his skills in PvP combat, leading the charge in battles with an unmatched fighting style and securing an undefeated 50-win streak."
     },
     {
-      name: "GoldenBill",
-      bounty: "85,000,000",
-      achievement: "Discovered the legendary Duck Fruit",
-      description: "After months of searching ancient maps and following cryptic clues, GoldenBill uncovered the mythical Duck Fruit, granting its user the ability to transform and control water currents."
+      name: "GABENINJA18",
+      bounty: "10,000,000",
+      achievement: "Chef of the Duck Gang",
+      description: "Known as the Chef of the Duck Gang, GABENINJA18 not only keeps the crew well-fed but also discovered the Duck Fruit, gaining the ability to control water currents and navigating through dangerous waters."
     },
     {
-      name: "WaveDiver",
+      name: "XAPOIX929",
       bounty: "70,000,000",
-      achievement: "Mapped the entire Grand Quack Line",
-      description: "Braving treacherous waters and hostile territories, WaveDiver has created the most comprehensive map of the Grand Quack Line, revealing hidden islands and secret passages."
+      achievement: "Adventurer of the Duck Gang",
+      description: "As the Adventurer of the Duck Gang, XAPOIX929 has charted the most perilous regions for the Duck Gang, uncovering hidden islands and secret paths that have given the crew an edge in exploration."
     },
-    {
-      name: "FeatherStorm",
-      bounty: "110,000,000",
-      achievement: "Orchestrated the Great Duck Invasion",
-      description: "A tactical genius, FeatherStorm planned and executed the legendary Great Duck Invasion, allowing our crew to claim three major territories in a single coordinated attack."
-    }
-  ];
+];
+
   
   const achievements = [
     {
-      title: "Blox Fruits Champions",
-      date: "August 2023",
-      description: "Defeated all raid bosses in a single day with no casualties",
+      title: "Kraken Pirates",
+      date: "March 2025",
+      description: "One of the allies of the Duck Gang, the Kraken Pirates have proven themselves to be a formidable force in the sea.",
       icon: <Trophy className="text-primary-500" size={24} />
     },
-    {
-      title: "Territory Dominance",
-      date: "October 2023",
-      description: "Controlled 5 major territories simultaneously for over a month",
-      icon: <Trophy className="text-primary-500" size={24} />
-    },
-    {
-      title: "Legendary Alliance",
-      date: "December 2023",
-      description: "Formed the Grand Quack Alliance with 3 other major crews",
-      icon: <Trophy className="text-primary-500" size={24} />
-    },
-    {
-      title: "Rell Seas Armada",
-      date: "February 2024",
-      description: "Assembled a fleet of 20+ Tier 5 ships, the largest in the game",
-      icon: <Trophy className="text-primary-500" size={24} />
-    },
-    {
-      title: "Community Growth",
-      date: "April 2024",
-      description: "Reached 500 active members across all divisions",
-      icon: <Trophy className="text-primary-500" size={24} />
-    },
-    {
-      title: "Charity Event",
-      date: "May 2024",
-      description: "Raised $5,000 for children's charity through in-game events",
-      icon: <Trophy className="text-primary-500" size={24} />
-    }
   ];
   
   const stats = [
@@ -120,7 +85,8 @@ const Achievements = () => {
                 <div className="bg-primary-800/30 rounded-lg border-2 border-primary-600 p-6 backdrop-blur-sm">
                   <div className="text-center text-primary-400 font-bold text-xl mb-4">WANTED</div>
                   <div className="w-32 h-32 mx-auto bg-primary-900/50 rounded-full mb-4 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-primary-500">{wantedPosters[currentPoster].name.charAt(0)}</span>
+                    {/* <span className="text-4xl font-bold text-primary-500">{wantedPosters[currentPoster].name.charAt(0)}</span> */}
+                    <img src='https://tr.rbxcdn.com/30DAY-AvatarHeadshot-2449676AFEDDC6B93F4953ED6AB9F8CC-Png/150/150/AvatarHeadshot/Webp/noFilter' className="w-full h-full object-cover rounded-full" />
                   </div>
                   <div className="text-center mb-4">
                     <h4 className="text-2xl font-bold text-white">{wantedPosters[currentPoster].name}</h4>
@@ -168,7 +134,7 @@ const Achievements = () => {
         {/* Notable Achievements */}
         <div className="mb-20">
           <h3 className="text-2xl font-bold mb-8 text-white text-center">Allies</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
             {achievements.map((achievement, index) => (
               <div 
                 key={index} 
