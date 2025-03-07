@@ -89,7 +89,7 @@ const TimelineEvent = ({ date, title, description, icon, isLeft, index }: Timeli
       }`}
     >
       <div className={`w-1/2 ${isLeft ? 'text-right pr-8' : 'pl-8'}`}>
-        <div className={`bg-gray-800 rounded-lg p-6 border border-primary-600/20 ${
+        <div className={`bg-gray-800/20 rounded-lg p-6 border border-primary-600/20 ${
           isLeft ? 'ml-auto' : ''
         }`}>
           <div className="text-primary-600 text-sm mb-2">{date}</div>

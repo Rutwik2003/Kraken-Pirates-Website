@@ -204,21 +204,21 @@ const CommunityHub = () => {
         <div className="bg-primary-900 rounded-xl p-8 border border-primary-600/20">
           <h3 className="text-2xl font-bold mb-6 text-white text-center">Follow Us</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            <a href="https://discord.xyz/quacky" target='_blank' className="flex flex-col items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-colors">
+            <a href="https://discord.xyz/quacky" target='_blank' className="flex flex-col items-center gap-3 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-700/50 transition-colors">
               <div className="w-12 h-12 rounded-full bg-primary-800/20 flex items-center justify-center">
                 <Discord className="text-primary-600" size={24} />
               </div>
               <span className="font-bold text-white">Discord</span>
               <span className="text-gray-400 text-sm">@DuckGang</span>
             </a>
-            <a href="#" className="flex flex-col items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-colors">
+            <a href="#" className="flex flex-col items-center gap-3 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-700/50 transition-colors">
               <div className="w-12 h-12 rounded-full bg-primary-800/20 flex items-center justify-center">
                 <Twitter className="text-primary-600" size={24} />
               </div>
               <span className="font-bold text-white">Twitter</span>
               <span className="text-gray-400 text-sm">@DuckGangCrew</span>
             </a>
-            <a href="https://www.youtube.com/@Duck_Law" target='_blank' className="flex flex-col items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-gray-700/50 transition-colors">
+            <a href="https://www.youtube.com/@Duck_Law" target='_blank' className="flex flex-col items-center gap-3 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-700/50 transition-colors">
               <div className="w-12 h-12 rounded-full bg-primary-800/20 flex items-center justify-center">
                 <Youtube className="text-primary-600" size={24} />
               </div>

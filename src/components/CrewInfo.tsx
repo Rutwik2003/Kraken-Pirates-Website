@@ -94,51 +94,39 @@ const CrewInfo = () => {
           </div> */}
         </div>
         
-        <div className="bg-gray-800/50 rounded-xl p-8 border border-primary-600/20">
-          <h3 className="text-2xl font-bold mb-6 text-primary-600 text-center">Notable Members</h3>
+        <div className="bg-gray-800/20 rounded-xl p-8 border border-primary-600/20">
+          <h3 className="text-2xl font-bold mb-6 text-light text-center">Notable Members</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {
                 name: "REDNTH1",
                 role: "Captain",
                 bounty: "10,000,000",
-                achievement: "Defeated the Sea King boss solo"
+                achievement: "Created the Duck Gang"
               },
               {
                 name: "LIGHTNINGQUICK9",
                 role: "Vice Captain",
                 bounty: "10,000,000",
-                achievement: "Undefeated in 50 consecutive duels"
+                achievement: "Led the crew with his sharp strategic mind"
               },
               {
                 name: "GABENINJA18",
                 role: "Chef",
                 bounty: "10,000,000",
-                achievement: "Discovered the legendary Duck Fruit"
+                achievement: "Cooked up the Duck Fruit"
               },
               {
                 name: "XAPOIX929",
                 role: "Adventurer",
                 bounty: "10,000,000",
-                achievement: "Mapped the entire Grand Quack Line"
+                achievement: "Unveiled the Duck World"
               },
-              // {
-              //   name: "FeatherStorm",
-              //   role: "Strategist",
-              //   bounty: "110,000,000",
-              //   achievement: "Orchestrated the Great Duck Invasion"
-              // },
-              // {
-              //   name: "DuckTales",
-              //   role: "Chronicler",
-              //   bounty: "65,000,000",
-              //   achievement: "Documented all DuckGang adventures"
-              // }
             ].map((member, index) => (
-              <div key={index} className="bg-gray-800 rounded-lg p-2.5 border border-primary-600/10 hover:border-primary-600/30 transition-all hover:bg-gray-700/50">
+              <div key={index} className="bg-primary-900 rounded-lg p-2 border border-primary-600/10 hover:border-primary-600/30 transition-all hover:bg-gray-700/50">
                 <div className="flex justify-between items-start mb-4">
                   <h4 className="text-lg font-bold text-white">{member.name}</h4>
-                  <div className="px-2 py-1 bg-primary-800/20 rounded text-xs text-primary-600 font-bold">
+                  <div className="px-2 py-1 bg-primary-900/20 rounded text-xs text-primary-600 font-bold">
                     B$ {member.bounty}
                   </div>
                 </div>

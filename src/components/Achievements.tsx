@@ -25,7 +25,7 @@ const Achievements = () => {
     },
     {
       name: "XAPOIX929",
-      bounty: "70,000,000",
+      bounty: "10,000,000",
       achievement: "Adventurer of the Duck Gang",
       description: "As the Adventurer of the Duck Gang, XAPOIX929 has charted the most perilous regions for the Duck Gang, uncovering hidden islands and secret paths that have given the crew an edge in exploration."
     },
@@ -138,7 +138,7 @@ const Achievements = () => {
             {achievements.map((achievement, index) => (
               <div 
                 key={index} 
-                className="bg-gray-800 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all hover:bg-gray-700/50"
+                className="bg-gray-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all hover:bg-gray-700/50"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary-600/20 rounded-full flex items-center justify-center flex-shrink-0">
@@ -158,7 +158,7 @@ const Achievements = () => {
         {/* Crew Statistics */}
         <div>
           <h3 className="text-2xl font-bold mb-8 text-white text-center">Crew Statistics</h3>
-          <div className="bg-gray-800 rounded-xl p-8 border border-primary-600/20">
+          <div className="bg-gray-800/20 rounded-xl p-8 border border-primary-600/20">
             {/* <div className="mt-8 pt-8 border-t border-gray-700"> */}
               <div className="flex items-center gap-3 justify-center">
                 <Star className="text-primary-500" size={20} />
