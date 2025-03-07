@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { UserPlus, ChevronDown, ChevronUp, Check, X } from 'lucide-react';
+import { UserPlus, ChevronDown, ChevronUp, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const JoinCrew = () => {
@@ -13,11 +13,11 @@ const JoinCrew = () => {
   const bloxFruitsFaqs = [
     {
       question: "How to join discord?",
-      answer: "To join discord please click the join button at the top of the page. You will be redirected to the discord server. Once there you can find the Crew channel and join the Crew server."
+      answer: "To join Discord, click the 'Apply to Blox Fruits Division' button below. You’ll be redirected to our Discord server, where you can find the Crew channel and join the Blox Fruits Division."
     },
     {
       question: "How to join Roblox Group?",
-      answer: "To join Roblox Group please click the join button at the top of the page. You will be redirected to the Roblox Group. Once there you can find the Crew channel and join the Crew server."
+      answer: "To join our Roblox Group, visit our official group page at !DUCKGANG! and click 'Join Group'. Then, head to the Crew channel in Discord for further instructions."
     },
     {
       question: "How active do I need to be?",
@@ -32,13 +32,19 @@ const JoinCrew = () => {
   const rellSeasFaqs = [
     {
       question: "How to join discord?",
-      answer: "To join discord please click the join button at the top of the page. You will be redirected to the discord server. Once there you can find the Crew channel and join the Crew server."
+      answer: "To join Discord, click the 'Apply to Rell Seas Division' button below. You’ll be redirected to our Discord server, where you can find the Crew channel and join the Rell Seas Division."
     },
     {
       question: "How to join Roblox Group?",
-      answer: "To join Roblox Group please click the join button at the top of the page. You will be redirected to the Roblox Group. Once there you can find the Crew channel and join the Crew server."
+      answer: "To join our Roblox Group, visit our official group page at !DUCKGANG! and click 'Join Group'. Then, head to the Crew channel in Discord for further instructions."
     },
   ];
+
+  // Define separate join links for each division
+  const joinLinks = {
+    blox: "https://discord.xyz/quacky", // Replace with your Blox Fruits Discord invite link
+    rell: "https://discord.gg/5T8Yp7PWqC", // Replace with your Rell Seas Discord invite link
+  };
 
   return (
     <section id="join-crew" className="py-20 bg-primary-900 relative">
@@ -123,11 +129,11 @@ const JoinCrew = () => {
                               <span className="text-gray-300"><strong>Join the Roblox Group:</strong> Become an official member by joining our Roblox group: <strong>!DUCKGANG!</strong> It’s where the true Duck Gang stands united.</span>
                             </li>
                             <li className="flex items-start gap-3">
-                          <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Check size={14} className="text-primary-400" />
-                          </div>
-                          <span className="text-gray-300"><strong>Discord Account:</strong> Communication is key! You must have a Discord account to stay connected with the crew.</span>
-                        </li>
+                              <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check size={14} className="text-primary-400" />
+                              </div>
+                              <span className="text-gray-300"><strong>Discord Account:</strong> Communication is key! You must have a Discord account to stay connected with the crew.</span>
+                            </li>
                             <li className="flex items-start gap-3">
                               <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <Check size={14} className="text-primary-400" />
@@ -140,12 +146,11 @@ const JoinCrew = () => {
                               </div>
                               <span className="text-gray-300"><strong>Duckgang Gear:</strong> Equip yourself with the "Tiny Duck" skin or proudly wear our Duck Gang merch, available in our official group store. <strong>!DUCKGANG!</strong>.</span>
                             </li>
-                            
                             <li className="flex items-start gap-3">
                               <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <Check size={14} className="text-primary-400" />
                               </div>
-                              <span className="text-gray-300"><strong>PvP Challenge:</strong> To prove your skills and gain entry, you'll need to PvP one of our members. Ready to show us what you’ve got? Simply call out any Duck Gang member in our Discord to challenge them..</span>
+                              <span className="text-gray-300"><strong>PvP Challenge:</strong> To prove your skills and gain entry, you'll need to PvP one of our members. Ready to show us what you’ve got? Simply call out any Duck Gang member in our Discord to challenge them.</span>
                             </li>
                           </>
                         ) : (
@@ -157,11 +162,11 @@ const JoinCrew = () => {
                               <span className="text-gray-300"><strong>Join the Roblox Group:</strong> Become an official member by joining our Roblox group: <strong>!DUCKGANG!</strong> It’s where the true Duck Gang stands united.</span>
                             </li>
                             <li className="flex items-start gap-3">
-                          <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                            <Check size={14} className="text-primary-400" />
-                          </div>
-                          <span className="text-gray-300"><strong>Discord Account:</strong> Communication is key! You must have a Discord account to stay connected with the crew.</span>
-                        </li>
+                              <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <Check size={14} className="text-primary-400" />
+                              </div>
+                              <span className="text-gray-300"><strong>Discord Account:</strong> Communication is key! You must have a Discord account to stay connected with the crew.</span>
+                            </li>
                           </>
                         )}
                         <li className="flex items-start gap-3">
@@ -170,7 +175,6 @@ const JoinCrew = () => {
                           </div>
                           <span className="text-gray-300"><strong>Active Participation:</strong> We’re all about engagement! You need to participate in at least 2 events per week to keep the crew active and thriving.</span>
                         </li>
-                        
                       </ul>
                     </div>
                   </div>
@@ -212,9 +216,15 @@ const JoinCrew = () => {
               </div>
 
               <div className="mt-8 text-center">
-                <button className="px-8 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold rounded-md transition-colors shadow-lg">
-                  Apply to {selectedDivision === 'blox' ? 'Blox Fruits' : 'Rell Seas'} Division
-                </button>
+                <a 
+                  href={selectedDivision === 'blox' ? joinLinks.blox : joinLinks.rell} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <button className="px-8 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold rounded-md transition-colors shadow-lg">
+                    Apply to {selectedDivision === 'blox' ? 'Blox Fruits' : 'Rell Seas'} Division
+                  </button>
+                </a>
               </div>
             </motion.div>
           )}
