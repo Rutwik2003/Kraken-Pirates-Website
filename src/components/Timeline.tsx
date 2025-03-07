@@ -19,19 +19,19 @@ const timelineEvents = [
   {
     date: 'February 2025',
     title: '2500 Members Milestone',
-    description: 'The crew grows stronger with each passing day',
+    description: 'The community grows stronger with each passing day',
     icon: <Users className="text-primary-600" size={24} />,
   },
   {
     date: 'March 2025',
     title: '5000 Members Milestone',
-    description: 'The crew grows stronger with each passing day',
+    description: 'The community grows stronger with each passing day',
     icon: <Trophy className="text-primary-600" size={24} />,
   },
   {
     date: 'December 2025',
     title: 'Future Goals',
-    description: '10,000 members milestone',
+    description: '10,000 Community members',
     icon: <Star className="text-primary-600" size={24} />,
   },
 ];

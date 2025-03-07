@@ -94,9 +94,9 @@ const CrewInfo = () => {
           </div> */}
         </div>
         
-        <div className="bg-gray-800/20 rounded-xl p-8 border border-primary-600/20">
-          <h3 className="text-2xl font-bold mb-6 text-light text-center">Notable Members</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="bg-gray-800/20 rounded-xl p-4 sm:p-8 border border-primary-600/20">
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 text-white text-center">Notable Members</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
               {
                 name: "REDNTH1",
@@ -123,9 +123,9 @@ const CrewInfo = () => {
                 achievement: "Unveiled the Duck World"
               },
             ].map((member, index) => (
-              <div key={index} className="bg-primary-900 rounded-lg p-2 border border-primary-600/10 hover:border-primary-600/30 transition-all hover:bg-gray-700/50">
-                <div className="flex justify-between items-start mb-4">
-                  <h4 className="text-lg font-bold text-white">{member.name}</h4>
+              <div key={index} className="bg-primary-900 rounded-lg p-4 border border-primary-600/10 hover:border-primary-600/30 transition-all hover:bg-gray-700/50">
+                <div className="flex justify-between items-start mb-4 flex-wrap gap-2">
+                  <h4 className="text-base sm:text-lg font-bold text-white">{member.name}</h4>
                   <div className="px-2 py-1 bg-primary-900/20 rounded text-xs text-primary-600 font-bold">
                     B$ {member.bounty}
                   </div>
