@@ -122,6 +122,12 @@ const CrewInfo = () => {
                 bounty: "10,000,000",
                 achievement: "Unveiled the Duck World"
               },
+              {
+                name: "THEHAVOX",
+                role: "Sniper",
+                bounty: "10,000,000",
+                achievement: "Split the SNOWY seas with a single shot"
+              },
             ].map((member, index) => (
               <div key={index} className="bg-primary-900 rounded-lg p-4 border border-primary-600/10 hover:border-primary-600/30 transition-all hover:bg-gray-700/50">
                 <div className="flex justify-between items-start mb-4 flex-wrap gap-2">

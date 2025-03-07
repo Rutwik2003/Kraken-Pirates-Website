@@ -29,6 +29,12 @@ const Achievements = () => {
       achievement: "Adventurer of the Duck Gang",
       description: "As the Adventurer of the Duck Gang, XAPOIX929 has charted the most perilous regions for the Duck Gang, uncovering hidden islands and secret paths that have given the crew an edge in exploration."
     },
+    {
+      name: "THEHAVOX",
+      bounty: "10,000,000",
+      achievement: "Sniper of the Duck Gang",
+      description: "As the Sniper of the Duck Gang, THEHAVOX has proven his skills in PvP combat, leading the charge in battles with an unmatched accuracy."
+    },
 ];
 
   
