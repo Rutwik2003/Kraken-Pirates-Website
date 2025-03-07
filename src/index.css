@@ -5,11 +5,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 4rem; /* Add padding for fixed navbar */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
 }
 
 body {
   background-color: #1D1616;
   color: #EEEEEE;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  min-height: 100svh; /* Use dynamic viewport height */
 }
 
 /* Custom scrollbar */
@@ -60,4 +63,42 @@ body {
 /* Parallax container */
 .parallax-container {
   @apply relative overflow-hidden;
+}
+
+/* Responsive text sizing */
+@layer base {
+  html {
+    font-size: 14px;
+  }
+  
+  @screen sm {
+    html {
+      font-size: 15px;
+    }
+  }
+  
+  @screen md {
+    html {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Better touch targets on mobile */
+@media (max-width: 640px) {
+  button, 
+  a {
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+  }
+}
+
+/* Container padding adjustments */
+.container {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+/* Image optimizations */
+img {
+  @apply max-w-full h-auto;
 }
