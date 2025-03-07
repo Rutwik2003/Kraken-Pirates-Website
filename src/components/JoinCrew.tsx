@@ -111,7 +111,7 @@ const JoinCrew = () => {
                 {/* Requirements and Process */}
                 <div>
                   <div className="space-y-6">
-                    <div className="bg-gray-800 rounded-lg p-6 border border-primary-600/20">
+                    <div className="bg-gray-800/20 rounded-lg p-6 border border-primary-600/20">
                       <h4 className="text-xl font-bold mb-4 text-white">Requirements</h4>
                       <ul className="space-y-3">
                         {selectedDivision === 'blox' ? (
@@ -177,7 +177,7 @@ const JoinCrew = () => {
                 </div>
 
                 {/* FAQs */}
-                <div className="bg-gray-800 rounded-lg p-6 border border-primary-600/20">
+                <div className="bg-gray-800/20 rounded-lg p-6 border border-primary-600/20">
                   <h4 className="text-xl font-bold mb-4 text-white">Frequently Asked Questions</h4>
                   <div className="space-y-3">
                     {(selectedDivision === 'blox' ? bloxFruitsFaqs : rellSeasFaqs).map((faq, index) => (
@@ -185,8 +185,8 @@ const JoinCrew = () => {
                         key={index} 
                         className={`border ${
                           expandedFaq === index 
-                            ? 'border-primary-600/30 bg-gray-700/30' 
-                            : 'border-gray-700 bg-gray-800'
+                            ? 'border-primary-600/30 bg-gray-800/30' 
+                            : 'border-primary-600/20 bg-gray-800/20'
                         } rounded-lg transition-all`}
                       >
                         <button
