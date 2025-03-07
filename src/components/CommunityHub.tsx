@@ -206,21 +206,30 @@ const CommunityHub = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             <a href="https://discord.xyz/quacky" target='_blank' className="flex flex-col items-center gap-3 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-700/50 transition-colors">
               <div className="w-12 h-12 rounded-full bg-primary-800/20 flex items-center justify-center">
-                <Discord className="text-primary-600" size={24} />
+                {/* <Discord className="text-primary-600" size={24} /> */}
+                <img 
+              src='/discord_logo.png' 
+              alt="Roblox" 
+              className="w-6 h-6 sm:w-8 sm:h-8 object-contain filter brightness-0 invert saturate-100 hue-rotate-180 sepia-[0.2]" 
+            />
               </div>
               <span className="font-bold text-white">Discord</span>
               <span className="text-gray-400 text-sm">@DuckGang</span>
             </a>
             <a href="#" className="flex flex-col items-center gap-3 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-700/50 transition-colors">
-              <div className="w-12 h-12 rounded-full bg-primary-800/20 flex items-center justify-center">
-                <Twitter className="text-primary-600" size={24} />
-              </div>
-              <span className="font-bold text-white">Twitter</span>
-              <span className="text-gray-400 text-sm">@DuckGangCrew</span>
+            <div className="w-12 h-12 rounded-full bg-primary-800/20 flex items-center justify-center">
+            <img 
+              src='/roblox_icon.png' 
+              alt="Roblox" 
+              className="w-6 h-6 sm:w-8 sm:h-8 object-contain filter brightness-0 invert saturate-100 hue-rotate-180 sepia-[0.2]" 
+            />
+          </div>
+              <span className="font-bold text-white">Roblox</span>
+              <span className="text-gray-400 text-sm">!DUCKGANG!</span>
             </a>
             <a href="https://www.youtube.com/@Duck_Law" target='_blank' className="flex flex-col items-center gap-3 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-700/50 transition-colors">
               <div className="w-12 h-12 rounded-full bg-primary-800/20 flex items-center justify-center">
-                <Youtube className="text-primary-600" size={24} />
+                <Youtube className="text-light" size={24} />
               </div>
               <span className="font-bold text-white">YouTube</span>
               <span className="text-gray-400 text-sm">DuckGang Official</span>

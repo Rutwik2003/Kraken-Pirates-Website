@@ -29,7 +29,7 @@ const Hero = () => {
             backgroundImage: `url('https://w0.peakpx.com/wallpaper/30/145/HD-wallpaper-polygonal-abstract-red-dark-background-abstract-dark-red-deviantart.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            // filter: 'brightness(0.4) blur(8px)',
+            filter: 'brightness(0.5) blur(2px)',
           }}
         />
       </Parallax>
