@@ -8,32 +8,38 @@ const Achievements = () => {
     {
       name: "REDNTH1",
       bounty: "10,000,000",
-      achievement: "Captain of the Duck Gang",
-      description: "As the Captain of the Duck Gang, REDNTH1 has led the crew to countless victories, using his sharp strategic mind and fearless leadership to guide us through the toughest battles."
+      achievement: "Captain of the Kraken Pirates",
+      description: "As the Captain of the Kraken Pirates, REDNTH1 has led the crew to countless victories, using his sharp strategic mind and fearless leadership to guide us through the toughest battles."
+    },
+    {
+      name: "MrDramaLlama",
+      bounty: "10,000,000",
+      achievement: "Vice Captain of the Kraken Pirates",
+      description: "As the Vice Captain, MrDramaLlama has proven his skills in PvP combat, leading the charge in battles with an unmatched fighting style and securing an undefeated 50-win streak."
     },
     {
       name: "LIGHTNINGQUICK9",
       bounty: "10,000,000",
-      achievement: "Vice Captain of the Duck Gang",
-      description: "As the Vice Captain, LIGHTNINGQUICK9 has proven his skills in PvP combat, leading the charge in battles with an unmatched fighting style and securing an undefeated 50-win streak."
+      achievement: "Adventurer of the Kraken Pirates",
+      description: "As the Adventurer of the Kraken Pirates, LIGHTNINGQUICK9 has charted the most perilous regions for the crew, uncovering hidden islands and secret paths that have given them an edge in exploration."
     },
     {
       name: "GABENINJA18",
       bounty: "10,000,000",
-      achievement: "Chef of the Duck Gang",
-      description: "Known as the Chef of the Duck Gang, GABENINJA18 not only keeps the crew well-fed but also discovered the Duck Fruit, gaining the ability to control water currents and navigating through dangerous waters."
+      achievement: "Chef of the Kraken Pirates",
+      description: "Known as the Chef of the Kraken Pirates, GABENINJA18 not only keeps the crew well-fed but also discovered the Duck Fruit, gaining the ability to control water currents and navigating through dangerous waters."
     },
     {
       name: "XAPOIX929",
       bounty: "10,000,000",
-      achievement: "Adventurer of the Duck Gang",
-      description: "As the Adventurer of the Duck Gang, XAPOIX929 has charted the most perilous regions for the Duck Gang, uncovering hidden islands and secret paths that have given the crew an edge in exploration."
+      achievement: "Adventurer of the Kraken Pirates",
+      description: "As the Adventurer of the Kraken Pirates, XAPOIX929 has charted the most perilous regions for the Kraken Pirates, uncovering hidden islands and secret paths that have given the crew an edge in exploration."
     },
     {
       name: "THEHAVOX",
       bounty: "10,000,000",
-      achievement: "Sniper of the Duck Gang",
-      description: "As the Sniper of the Duck Gang, THEHAVOX has proven his skills in PvP combat, leading the charge in battles with an unmatched accuracy."
+      achievement: "Sniper of the Kraken Pirates",
+      description: "As the Sniper of the Kraken Pirates, THEHAVOX has proven his skills in PvP combat, leading the charge in battles with an unmatched accuracy."
     },
 ];
 
@@ -42,7 +48,7 @@ const Achievements = () => {
     {
       title: "Kraken Pirates",
       date: "March 2025",
-      description: "One of the allies of the Duck Gang, the Kraken Pirates have proven themselves to be a formidable force in the sea.",
+      description: "One of the allies of the Kraken Pirates, the Kraken Pirates have proven themselves to be a formidable force in the sea.",
       icon: <Trophy className="text-primary-500" size={24} />
     },
   ];
@@ -78,7 +84,7 @@ const Achievements = () => {
           </div>
           <h2 className="text-4xl font-bold mb-4 text-white">Crew Achievements</h2>
           <p className="text-xl text-primary-400 max-w-2xl mx-auto">
-            Explore the legendary accomplishments and notorious members of the DuckGang
+            Explore the legendary accomplishments and notorious members of the Kraken Pirates
           </p>
         </div>
         
@@ -138,7 +144,7 @@ const Achievements = () => {
         </div>
         
         {/* Notable Achievements */}
-        <div className="mb-20">
+        {/* <div className="mb-20">
           <h3 className="text-2xl font-bold mb-8 text-white text-center">Allies</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
             {achievements.map((achievement, index) => (
@@ -159,7 +165,7 @@ const Achievements = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         
         {/* Crew Statistics */}
         <div>

@@ -70,7 +70,7 @@ const CommunityHub = () => {
           </div>
           <h2 className="text-4xl font-bold mb-4 text-white">Community Hub</h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Connect with fellow crew members and stay updated on all DuckGang activities
+            Connect with fellow crew members and stay updated on all Kraken Pirates activities
           </p>
         </div>
         
@@ -87,13 +87,13 @@ const CommunityHub = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="bg-gray-700/50 px-4 py-2 rounded-md text-gray-300">
-                  <span className="font-bold text-primary-600">6000+</span> Members
+                  <span className="font-bold text-primary-600">50+</span> Members
                 </div>
                 <div className="bg-gray-700/50 px-4 py-2 rounded-md text-gray-300">
-                  <span className="font-bold text-primary-600">50+</span> Channels
+                  <span className="font-bold text-primary-600">60+</span> Channels
                 </div>
                 <div className="bg-gray-700/50 px-4 py-2 rounded-md text-gray-300">
-                  <span className="font-bold text-primary-600">20+</span> Voice Rooms
+                  <span className="font-bold text-primary-600">10</span> Voice Rooms
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@ const CommunityHub = () => {
                   <span>Rell seas info</span>
                 </div>
               </div>
-              <a href='https://discord.xyz/quacky' target='_blank'>
+              <a href='https://discord.gg/NNzJ268Gqw' target='_blank'>
               <button className="w-full py-3 bg-primary-800 hover:bg-primary-600 text-white font-bold rounded-md transition-colors flex items-center justify-center gap-2">
                 <Discord size={18} />
                 <span>Join Our Discord</span>
@@ -204,7 +204,7 @@ const CommunityHub = () => {
         <div className="bg-primary-900 rounded-xl p-8 border border-primary-600/20">
           <h3 className="text-2xl font-bold mb-6 text-white text-center">Follow Us</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            <a href="https://discord.xyz/quacky" target='_blank' className="flex flex-col items-center gap-3 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-700/50 transition-colors">
+            <a href="https://discord.gg/NNzJ268Gqw" target='_blank' className="flex flex-col items-center gap-3 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-700/50 transition-colors">
               <div className="w-12 h-12 rounded-full bg-primary-800/20 flex items-center justify-center">
                 {/* <Discord className="text-primary-600" size={24} /> */}
                 <img 
@@ -214,9 +214,9 @@ const CommunityHub = () => {
             />
               </div>
               <span className="font-bold text-white">Discord</span>
-              <span className="text-gray-400 text-sm">@DuckGang</span>
+              <span className="text-gray-400 text-sm">Kraken Pirates</span>
             </a>
-            <a href="#" className="flex flex-col items-center gap-3 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-700/50 transition-colors">
+            <a href="https://www.roblox.com/communities/5379845/The-Iron-Blood-Pirates#!/about" target='_blank' className="flex flex-col items-center gap-3 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-700/50 transition-colors">
             <div className="w-12 h-12 rounded-full bg-primary-800/20 flex items-center justify-center">
             <img 
               src='/roblox_icon.png' 
@@ -225,14 +225,14 @@ const CommunityHub = () => {
             />
           </div>
               <span className="font-bold text-white">Roblox</span>
-              <span className="text-gray-400 text-sm">!DUCKGANG!</span>
+              <span className="text-gray-400 text-sm">The Kraken Pirates</span>
             </a>
             <a href="https://www.youtube.com/@Duck_Law" target='_blank' className="flex flex-col items-center gap-3 p-4 bg-gray-800/30 rounded-lg hover:bg-gray-700/50 transition-colors">
               <div className="w-12 h-12 rounded-full bg-primary-800/20 flex items-center justify-center">
                 <Youtube className="text-light" size={24} />
               </div>
               <span className="font-bold text-white">YouTube</span>
-              <span className="text-gray-400 text-sm">DuckGang Official</span>
+              <span className="text-gray-400 text-sm">REDNTH1</span>
             </a>
             {/* <a href="#" className="flex flex-col items-center gap-3 p-4 bg-gray-700/30 rounded-lg hover:bg-primary-700/50 transition-colors">
               <div className="w-12 h-12 rounded-full bg-primary-800/20 flex items-center justify-center">

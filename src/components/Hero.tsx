@@ -29,10 +29,10 @@ const Hero = () => {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url('https://w0.peakpx.com/wallpaper/30/145/HD-wallpaper-polygonal-abstract-red-dark-background-abstract-dark-red-deviantart.jpg')`,
+            backgroundImage: `url('Kraken-Pirates_1_1.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter:'brightness(0.5) blur(2px)',
+            filter:'brightness(0.8) blur(1px)', 
             transition: 'all 0.5s ease-in-out'
           }}
         />
@@ -49,7 +49,7 @@ const Hero = () => {
             <div className="relative">
               <motion.img 
                 className='w-16 h-16 sm:w-20 sm:h-20' 
-                src='/duckgang_logo.png' 
+                src='/kraken_pirate_logo.png' 
                 alt="DuckGang Logo"
                 animate={{ 
                   scale: [1, 1.1, 1],
@@ -63,11 +63,11 @@ const Hero = () => {
               />
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 text-primary-600 drop-shadow-lg">
-            DuckGang
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 text-primary-300 drop-shadow-lg">
+            Kraken Pirates
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-gray-200 px-4">
-            The most fearsome gaming crew on the high seas of Roblox
+            The most prominent crew on the high seas of Roblox
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
             <motion.a 

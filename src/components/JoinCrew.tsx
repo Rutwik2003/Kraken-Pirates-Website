@@ -34,10 +34,6 @@ const JoinCrew = () => {
       question: "How to join discord?",
       answer: "To join Discord, click the 'Apply to Rell Seas Division' button below. You’ll be redirected to our Discord server, where you can find the Crew channel and join the Rell Seas Division."
     },
-    {
-      question: "How to join Roblox Group?",
-      answer: "To join our Roblox Group, visit our official group page at !DUCKGANG! and click 'Join Group'. Then, head to the Crew channel in Discord for further instructions."
-    },
   ];
 
   // Define separate join links for each division
@@ -60,13 +56,13 @@ const JoinCrew = () => {
           </div>
           <h2 className="text-4xl font-bold mb-4 text-white">Join Our Crews</h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Choose your division and become part of the legendary DuckGang
+            Choose your division and become part of the legendary Kraken Pirates
           </p>
         </div>
         
         {/* Division Selection */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
-          <button
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-4xl mx-auto mb-16">
+          {/* <button
             onClick={() => setSelectedDivision(selectedDivision === 'blox' ? null : 'blox')}
             className={`relative overflow-hidden rounded-xl border-2 transition-all duration-300 ${
               selectedDivision === 'blox' 
@@ -82,7 +78,7 @@ const JoinCrew = () => {
                 {selectedDivision === 'blox' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
               </div>
             </div>
-          </button>
+          </button> */}
 
           <button
             onClick={() => setSelectedDivision(selectedDivision === 'rell' ? null : 'rell')}
@@ -93,8 +89,8 @@ const JoinCrew = () => {
             }`}
           >
             <div className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Rell Seas Division</h3>
-              <p className="text-gray-300 mb-4">Be part of Duck Gang's Rell Seas Division! Get ready for legendary adventures, as we dominate the new world of Rell Seas from day one!</p>
+              <h3 className="text-2xl font-bold text-white mb-4">Rell Seas</h3>
+              <p className="text-gray-300 mb-4">Be part of Kraken Pirate's Crew! Get ready for legendary adventures, as we dominate the new world of Rell Seas from day one!</p>
               <div className="flex items-center text-primary-600">
                 <span className="mr-2">View Details</span>
                 {selectedDivision === 'rell' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
@@ -122,12 +118,12 @@ const JoinCrew = () => {
                       <ul className="space-y-3">
                         {selectedDivision === 'blox' ? (
                           <>
-                            <li className="flex items-start gap-3">
+                            {/* <li className="flex items-start gap-3">
                               <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <Check size={14} className="text-primary-400" />
                               </div>
                               <span className="text-gray-300"><strong>Join the Roblox Group:</strong> Become an official member by joining our Roblox group: <strong>!DUCKGANG!</strong> It’s where the true Duck Gang stands united.</span>
-                            </li>
+                            </li> */}
                             <li className="flex items-start gap-3">
                               <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <Check size={14} className="text-primary-400" />
@@ -155,12 +151,12 @@ const JoinCrew = () => {
                           </>
                         ) : (
                           <>
-                            <li className="flex items-start gap-3">
+                            {/* <li className="flex items-start gap-3">
                               <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <Check size={14} className="text-primary-400" />
                               </div>
                               <span className="text-gray-300"><strong>Join the Roblox Group:</strong> Become an official member by joining our Roblox group: <strong>!DUCKGANG!</strong> It’s where the true Duck Gang stands united.</span>
-                            </li>
+                            </li> */}
                             <li className="flex items-start gap-3">
                               <div className="w-6 h-6 rounded-full bg-primary-600 flex items-center justify-center flex-shrink-0 mt-0.5">
                                 <Check size={14} className="text-primary-400" />
@@ -222,7 +218,7 @@ const JoinCrew = () => {
                   rel="noopener noreferrer"
                 >
                   <button className="px-8 py-3 bg-primary-600 hover:bg-primary-500 text-white font-bold rounded-md transition-colors shadow-lg">
-                    Apply to {selectedDivision === 'blox' ? 'Blox Fruits' : 'Rell Seas'} Division
+                    Apply to {selectedDivision === 'blox' ? 'Blox Fruits' : 'the Crew'} 
                   </button>
                 </a>
               </div>

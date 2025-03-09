@@ -10,13 +10,12 @@ import {
   HeartHandshake,
 } from "lucide-react";
 import Hero from "../components/Hero";
-import Timeline from "../components/Timeline";
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      <Timeline />
+      {/* <Timeline /> */}
 
       {/* Section Previews */}
       <section className="py-20 bg-primary-900">
@@ -60,7 +59,7 @@ const Home = () => {
                       icon: <Crown size={16} className="text-primary-600" />,
                     },
                     {
-                      name: "LIGHTNINGQUICK9",
+                      name: "MrDramaLlama",
                       role: "Vice Captain",
                       icon: <Crown size={16} className="text-primary-600" />,
                     },
@@ -101,8 +100,8 @@ const Home = () => {
               <Swords className="text-primary-600" size={28} />
               <h2 className="text-3xl font-bold text-white">Join Our Crew</h2>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
+            <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
+              {/* <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
                 <h3 className="text-xl font-bold text-white mb-4">Divisions</h3>
                 <div className="space-y-4 mb-6">
                   <div className="bg-primary-900/30 p-4 rounded-lg">
@@ -120,13 +119,13 @@ const Home = () => {
                 >
                   Learn About Divisions <ArrowRight size={16} />
                 </Link>
-              </div>
+              </div> */}
               <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
-                <h3 className="text-xl font-bold text-white mb-4">Divisions</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Our Crew</h3>
                 <div className="space-y-4 mb-6">
                   <div className="bg-primary-900/30 p-4 rounded-lg">
                     <h4 className="font-bold text-white mb-2">
-                      Rell Seas Division
+                      Rell Seas Crew
                     </h4>
                     <p className="text-gray-300">
                       Join our elite Rell Seas team and dominate the seas
@@ -137,7 +136,7 @@ const Home = () => {
                   to="/join-crew"
                   className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-500 transition-colors"
                 >
-                  Learn About Divisions <ArrowRight size={16} />
+                  Learn More <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
@@ -166,19 +165,19 @@ const Home = () => {
                   <div className="grid grid-cols-3 gap-4 mb-4">
                     <div className="bg-primary-900/30 p-3 rounded-lg text-center">
                       <div className="text-xl font-bold text-primary-600">
-                        6000+
+                        50+
                       </div>
                       <div className="text-sm text-gray-300">Members</div>
                     </div>
                     <div className="bg-primary-900/30 p-3 rounded-lg text-center">
                       <div className="text-xl font-bold text-primary-600">
-                        50+
+                        60+
                       </div>
                       <div className="text-sm text-gray-300">Channels</div>
                     </div>
                     <div className="bg-primary-900/30 p-3 rounded-lg text-center">
                       <div className="text-xl font-bold text-primary-600">
-                        20+
+                        10+
                       </div>
                       <div className="text-sm text-gray-300">Voice Rooms</div>
                     </div>
@@ -291,7 +290,7 @@ const Home = () => {
           </div>
 
           {/* Allies Preview */}
-          <div className="mb-20 ">
+          {/* <div className="mb-20 ">
             <div className="flex items-center gap-3 justify-center mb-8">
               <HeartHandshake className="text-primary-600" size={28} />
               <h2 className="text-3xl font-bold text-white">Allies</h2>
@@ -304,12 +303,12 @@ const Home = () => {
                     <h4 className="font-bold text-white mb-2">Kraken Pirates</h4>
                   </div>
                 </div>
-                {/* <Link
+                <Link
                   to="/achievements"
                   className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-500 transition-colors"
                 >
                   Meet Our Allies <ArrowRight size={16} />
-                </Link> */}
+                </Link>
               </div>
             </div>
             <div className="text-center mt-8">
@@ -320,7 +319,7 @@ const Home = () => {
                 View Our Allies <ArrowRight size={18} />
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

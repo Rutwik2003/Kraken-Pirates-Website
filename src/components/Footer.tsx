@@ -8,8 +8,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Anchor className="text-primary-600" size={24} />
-              <span className="text-xl font-bold text-primary-600">DuckGang</span>
+              {/* <Anchor className="text-primary-600" size={24} /> */}
+              <img src="kraken_pirate_logo.png" alt="Kraken Pirates" className="w-10 h-10" />
+              <span className="text-xl font-bold text-primary-600">Kraken Pirates</span>
             </div>
             <p className="text-gray-400 mb-6">
               The most fearsome gaming crew on the high seas of Roblox. Join us for adventure, camaraderie, and glory!
@@ -77,10 +78,10 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © 2025 DuckGang. All rights reserved.
+            © 2025 Kraken Pirates. All rights reserved.
           </p>
           <p className="text-gray-500 text-sm flex items-center gap-1">
-            Made with <Heart size={14} className="text-primary-600" /> by the DuckGang Crew
+            Made with <Heart size={14} className="text-primary-600" /> by the Kraken Pirate Crew
           </p>
         </div>
       </div>

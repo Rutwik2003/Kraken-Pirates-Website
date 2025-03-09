@@ -24,7 +24,7 @@ const Navbar = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -45,8 +45,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src='/duckgang_logo.png' className='w-6 h-6 sm:w-8 sm:h-8' alt="DuckGang Logo" />
-            <span className="text-lg sm:text-xl font-bold text-light">DuckGang</span>
+            <img src='/kraken_pirate_logo.png' className='w-6 h-6 sm:w-8 sm:h-8' alt="DuckGang Logo" />
+            <span className="text-lg sm:text-xl font-bold text-light">Kraken Pirates</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -69,7 +69,7 @@ const Navbar = () => {
               );
             })}
             <a 
-              href="https://discord.xyz/quacky" 
+              href="https://discord.gg/NNzJ268Gqw" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="px-3 sm:px-4 py-2 bg-primary-800 hover:bg-primary-600 text-light rounded-md transition-colors text-sm sm:text-base"
@@ -77,7 +77,7 @@ const Navbar = () => {
               Join Discord
             </a>
             <a 
-              href="https://www.roblox.com/communities/35512357/DUCKGANG#!/about" 
+              href="https://www.roblox.com/communities/5379845/The-Iron-Blood-Pirates#!/about" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hidden lg:block px-3 sm:px-4 py-2 bg-primary-800 hover:bg-primary-600 text-light rounded-md transition-colors text-sm sm:text-base"
