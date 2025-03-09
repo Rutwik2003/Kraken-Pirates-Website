@@ -32,7 +32,7 @@ const Hero = () => {
             backgroundImage: `url('Kraken-Pirates_1_1.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            filter:'brightness(0.8) blur(1px)', 
+            filter:'brightness(0.8) blur(0px)', 
             transition: 'all 0.5s ease-in-out'
           }}
         />
