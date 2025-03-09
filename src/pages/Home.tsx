@@ -9,19 +9,47 @@ import {
   Crown,
   HeartHandshake,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import Hero from "../components/Hero";
+
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 const Home = () => {
   return (
     <div>
       <Hero />
-      {/* <Timeline /> */}
-
-      {/* Section Previews */}
-      <section className="py-20 bg-primary-900">
+      
+      <motion.section
+        className="py-20 bg-primary-900"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={containerVariants}
+      >
         <div className="container mx-auto px-4">
           {/* Crew Info Preview */}
-          <div className="mb-20">
+          <motion.div className="mb-20" variants={itemVariants}>
             <div className="flex items-center gap-3 justify-center mb-8">
               <Users className="text-primary-600" size={28} />
               <h2 className="text-3xl font-bold text-white">
@@ -29,16 +57,17 @@ const Home = () => {
               </h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
+              <motion.div
+                variants={itemVariants}
+                className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all"
+              >
                 <h3 className="text-xl font-bold text-white mb-4">
                   Our History
                 </h3>
                 <p className="text-gray-300 mb-6">
-                The story of Kraken Pirates begins with a simple vision: a group
-              of passionate gamers coming together to create something
-              legendary. United by their love for adventure and competitive
-              gameplay, the crew quickly made a name for themselves, dominating
-              the seas with unwavering teamwork and unity....
+                  The story of Kraken Pirates begins with a simple vision: a group
+                  of passionate gamers coming together to create something
+                  legendary...
                 </p>
                 <Link
                   to="/crew-info"
@@ -46,8 +75,11 @@ const Home = () => {
                 >
                   Read Full History <ArrowRight size={16} />
                 </Link>
-              </div>
-              <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
+              </motion.div>
+              <motion.div
+                variants={itemVariants}
+                className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all"
+              >
                 <h3 className="text-xl font-bold text-white mb-4">
                   Notable Members
                 </h3>
@@ -82,45 +114,29 @@ const Home = () => {
                 >
                   Meet All Members <ArrowRight size={16} />
                 </Link>
-              </div>
+              </motion.div>
             </div>
-            <div className="text-center mt-8">
+            <motion.div className="text-center mt-8" variants={itemVariants}>
               <Link
                 to="/crew-info"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary-800 hover:bg-primary-600 text-white font-bold rounded-md transition-colors"
               >
                 Explore Full Crew Info <ArrowRight size={18} />
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Join Crew Preview */}
-          <div className="mb-20">
+          <motion.div className="mb-20" variants={itemVariants}>
             <div className="flex items-center gap-3 justify-center mb-8">
               <Swords className="text-primary-600" size={28} />
               <h2 className="text-3xl font-bold text-white">Join Our Crew</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
-              {/* <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
-                <h3 className="text-xl font-bold text-white mb-4">Divisions</h3>
-                <div className="space-y-4 mb-6">
-                  <div className="bg-primary-900/30 p-4 rounded-lg">
-                    <h4 className="font-bold text-white mb-2">
-                      Blox Fruits Division
-                    </h4>
-                    <p className="text-gray-300">
-                      Join our elite Blox Fruits team and dominate the seas
-                    </p>
-                  </div>
-                </div>
-                <Link
-                  to="/join-crew"
-                  className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-500 transition-colors"
-                >
-                  Learn About Divisions <ArrowRight size={16} />
-                </Link>
-              </div> */}
-              <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
+              <motion.div
+                variants={itemVariants}
+                className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all"
+              >
                 <h3 className="text-xl font-bold text-white mb-4">Our Crew</h3>
                 <div className="space-y-4 mb-6">
                   <div className="bg-primary-900/30 p-4 rounded-lg">
@@ -138,26 +154,29 @@ const Home = () => {
                 >
                   Learn More <ArrowRight size={16} />
                 </Link>
-              </div>
+              </motion.div>
             </div>
-            <div className="text-center mt-8">
+            <motion.div className="text-center mt-8" variants={itemVariants}>
               <Link
                 to="/join-crew"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary-800 hover:bg-primary-600 text-white font-bold rounded-md transition-colors"
               >
                 Start Your Journey <ArrowRight size={18} />
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Community Preview */}
-          <div className="mb-20">
+          <motion.div className="mb-20" variants={itemVariants}>
             <div className="flex items-center gap-3 justify-center mb-8">
               <MessageSquare className="text-primary-600" size={28} />
               <h2 className="text-3xl font-bold text-white">Community</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
+              <motion.div
+                variants={itemVariants}
+                className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all"
+              >
                 <h3 className="text-xl font-bold text-white mb-4">
                   Discord Server
                 </h3>
@@ -184,8 +203,7 @@ const Home = () => {
                   </div>
                   <p className="text-gray-300">
                     Join our active Discord community to connect with fellow
-                    crew members, participate in events, and stay updated on all
-                    activities.
+                    crew members...
                   </p>
                 </div>
                 <Link
@@ -194,8 +212,11 @@ const Home = () => {
                 >
                   Explore Community <ArrowRight size={16} />
                 </Link>
-              </div>
-              <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
+              </motion.div>
+              <motion.div
+                variants={itemVariants}
+                className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all"
+              >
                 <h3 className="text-xl font-bold text-white mb-4">
                   Social Media
                 </h3>
@@ -221,26 +242,29 @@ const Home = () => {
                 >
                   Connect With Us <ArrowRight size={16} />
                 </Link>
-              </div>
+              </motion.div>
             </div>
-            <div className="text-center mt-8">
+            <motion.div className="text-center mt-8" variants={itemVariants}>
               <Link
                 to="/community"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary-800 hover:bg-primary-600 text-white font-bold rounded-md transition-colors"
               >
                 Join Our Community <ArrowRight size={18} />
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Achievements Preview */}
-          <div className="mb-20">
+          <motion.div className="mb-20" variants={itemVariants}>
             <div className="flex items-center gap-3 justify-center mb-8">
               <Trophy className="text-primary-600" size={28} />
               <h2 className="text-3xl font-bold text-white">Achievements</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
+              <motion.div
+                variants={itemVariants}
+                className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all"
+              >
                 <h3 className="text-xl font-bold text-white mb-4">Recent Achievements</h3>
                 <div className="space-y-4 mb-6">
                   <div className="bg-primary-900/30 p-4 rounded-lg">
@@ -258,13 +282,16 @@ const Home = () => {
                 >
                   View All Achievements <ArrowRight size={16} />
                 </Link>
-              </div>
-              <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
+              </motion.div>
+              <motion.div
+                variants={itemVariants}
+                className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all"
+              >
                 <h3 className="text-xl font-bold text-white mb-4">Notable Members</h3>
                 <div className="space-y-4 mb-6">
                   <div className="bg-primary-900/30 p-4 rounded-lg">
                     <h4 className="font-bold text-white mb-2">REDNTH1</h4>
-                    <p className="text-gray-300">Owner of the Kraken Pirates</p>
+                    <p className="text-gray-300">Leader the Kraken Pirates</p>
                   </div>
                   <div className="bg-primary-900/30 p-4 rounded-lg">
                     <h4 className="font-bold text-white mb-2">MrDramaLlama</h4>
@@ -277,26 +304,29 @@ const Home = () => {
                 >
                   Meet Our Champions <ArrowRight size={16} />
                 </Link>
-              </div>
+              </motion.div>
             </div>
-            <div className="text-center mt-8">
+            <motion.div className="text-center mt-8" variants={itemVariants}>
               <Link
                 to="/achievements"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary-800 hover:bg-primary-600 text-white font-bold rounded-md transition-colors"
               >
                 Explore All Achievements <ArrowRight size={18} />
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Allies Preview */}
-          {/* <div className="mb-20 ">
+          {/* <motion.div className="mb-20" variants={itemVariants}>
             <div className="flex items-center gap-3 justify-center mb-8">
               <HeartHandshake className="text-primary-600" size={28} />
               <h2 className="text-3xl font-bold text-white">Allies</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
-              <div className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all">
+              <motion.div
+                variants={itemVariants}
+                className="bg-primary-800/20 rounded-lg p-6 border border-primary-600/20 hover:border-primary-600/40 transition-all"
+              >
                 <h3 className="text-xl font-bold text-white mb-4">Our Allies</h3>
                 <div className="space-y-4 mb-6">
                   <div className="bg-primary-900/30 p-4 rounded-lg">
@@ -309,19 +339,19 @@ const Home = () => {
                 >
                   Meet Our Allies <ArrowRight size={16} />
                 </Link>
-              </div>
+              </motion.div>
             </div>
-            <div className="text-center mt-8">
+            <motion.div className="text-center mt-8" variants={itemVariants}>
               <Link
                 to="/achievements"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary-800 hover:bg-primary-600 text-white font-bold rounded-md transition-colors"
               >
                 View Our Allies <ArrowRight size={18} />
               </Link>
-            </div>
-          </div> */}
+            </motion.div>
+          </motion.div> */}
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
