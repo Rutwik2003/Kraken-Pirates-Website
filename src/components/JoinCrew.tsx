@@ -39,7 +39,7 @@ const JoinCrew = () => {
   // Define separate join links for each division
   const joinLinks = {
     blox: "https://discord.xyz/quacky", // Replace with your Blox Fruits Discord invite link
-    rell: "https://discord.gg/5T8Yp7PWqC", // Replace with your Rell Seas Discord invite link
+    rell: "https://discord.gg/NNzJ268Gqw", // Replace with your Rell Seas Discord invite link
   };
 
   return (
