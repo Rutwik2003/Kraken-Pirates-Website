@@ -34,11 +34,11 @@ const Home = () => {
                   Our History
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  The story of Duck Gang begins with a simple vision: a group of
-                  passionate gamers coming together to create something
-                  legendary. Initially starting out in the world of Blox Fruit,
-                  the gang was formed by a small group of friends united by
-                  their love for adventure and competitive gameplay...
+                The story of Kraken Pirates begins with a simple vision: a group
+              of passionate gamers coming together to create something
+              legendary. United by their love for adventure and competitive
+              gameplay, the crew quickly made a name for themselves, dominating
+              the seas with unwavering teamwork and unity....
                 </p>
                 <Link
                   to="/crew-info"

@@ -90,7 +90,7 @@ const JoinCrew = () => {
           >
             <div className="p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Rell Seas</h3>
-              <p className="text-gray-300 mb-4">Be part of Kraken Pirate's Crew! Get ready for legendary adventures, as we dominate the new world of Rell Seas from day one!</p>
+              <p className="text-gray-300 mb-4">Be part of Kraken Pirates Crew! Get ready for legendary adventures, as we dominate the new world of Rell Seas from day one!</p>
               <div className="flex items-center text-primary-600">
                 <span className="mr-2">View Details</span>
                 {selectedDivision === 'rell' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
