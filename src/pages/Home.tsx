@@ -249,7 +249,7 @@ const Home = () => {
                   </div>
                   <div className="bg-primary-900/30 p-4 rounded-lg">
                     <h4 className="font-bold text-white mb-2">Community Growth</h4>
-                    <p className="text-gray-300">Reached 6000+ active members</p>
+                    <p className="text-gray-300">Reached 50+ active members</p>
                   </div>
                 </div>
                 <Link
@@ -264,11 +264,11 @@ const Home = () => {
                 <div className="space-y-4 mb-6">
                   <div className="bg-primary-900/30 p-4 rounded-lg">
                     <h4 className="font-bold text-white mb-2">REDNTH1</h4>
-                    <p className="text-gray-300">Created the Duck Gang</p>
+                    <p className="text-gray-300">Created the Kraken Pirates</p>
                   </div>
                   <div className="bg-primary-900/30 p-4 rounded-lg">
-                    <h4 className="font-bold text-white mb-2">LIGHTNINGQUICK9</h4>
-                    <p className="text-gray-300">Led the crew with strategic excellence</p>
+                    <h4 className="font-bold text-white mb-2">MrDramaLlama</h4>
+                    <p className="text-gray-300">Founded the Kraken Pirates</p>
                   </div>
                 </div>
                 <Link
