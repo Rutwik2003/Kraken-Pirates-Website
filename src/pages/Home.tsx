@@ -291,11 +291,11 @@ const Home = () => {
                 <div className="space-y-4 mb-6">
                   <div className="bg-primary-900/30 p-4 rounded-lg">
                     <h4 className="font-bold text-white mb-2">REDNTH1</h4>
-                    <p className="text-gray-300">Leader the Kraken Pirates</p>
+                    <p className="text-gray-300">Leader of the Kraken Pirates</p>
                   </div>
                   <div className="bg-primary-900/30 p-4 rounded-lg">
                     <h4 className="font-bold text-white mb-2">MrDramaLlama</h4>
-                    <p className="text-gray-300">Founded the Kraken Pirates</p>
+                    <p className="text-gray-300">Co-leader of the Kraken Pirates</p>
                   </div>
                 </div>
                 <Link
